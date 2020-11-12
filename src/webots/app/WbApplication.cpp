@@ -83,7 +83,7 @@ WbApplication::WbApplication() {
     QString path(qgetenv("Path"));
     QString newPath(path);
     while (1) {
-      const int i = newPath.indexOf("\\msys\\1.0\\bin", 0, Qt::CaseInsensitive);
+      const int i = newPath.indexOf(R"(\msys\1.0\bin)", 0, Qt::CaseInsensitive);
       if (i == -1)
         break;
       int j = 0;
